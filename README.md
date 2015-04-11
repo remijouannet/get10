@@ -9,6 +9,10 @@ I made this game to learn Android, Java and OpenGL 2.0.
 - Use Google Admob
 - Use Google Analytics
 - sounds and ads can be disable in the settings menu
+- 11 levels of hell
+- really annoying sounds
+- colorful
+
 
 ###Note
 - my Admob and GA ID are, of course, not push to this repo
