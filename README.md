@@ -1,9 +1,11 @@
 # get10 [![Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.remijouannet.get10)
 get10, an android game, OpenGL 2.0, Admob, Google Analytics
 
+I made this game to learn Android, Java and OpenGL 2.0.
+
 ###Overview:
 - Open Source
-- made without Game Engine, just OpenGL 2.0
+- made without any  Game Engine, just OpenGL 2.0
 - Use Google Admob
 - Use Google Analytics
 - sounds and ads can be disable in the settings menu
