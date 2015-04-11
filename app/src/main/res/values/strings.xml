@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">get10</string>
+    <string name="action_settings">Settings</string>
+    <string name="shared_highscore">highscore</string>
+    <string name="shared_death">death</string>
+    <string name="shared_unlock">unlock</string>
+    <string name="shared_config">config</string>
+    <string name="highscore">HIGHSCORE</string>
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="key_sound">sound</string>
+    <string name="key_ads">ads</string>
+</resources>
