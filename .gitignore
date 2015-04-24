@@ -1,8 +1,2 @@
-.gradle
-/local.properties
 /.idea/workspace.xml
-.DS_Store
-/build
-/app/src/main/res/values/googleid.xml
-/app/src/main/res/xml/app_tracker.xml
 .idea

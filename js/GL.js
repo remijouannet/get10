@@ -1,16 +1,16 @@
 function GL (width, height) {
-    this.canvas;
-    this.gl;
-    this.shaderProgram;
+    this.canvas = null;
+    this.gl = null;
+    this.shaderProgram = null;
 
-    this.VerticesBuffer;
-    this.VerticesColorBuffer;
+    this.VerticesBuffer = null;
+    this.VerticesColorBuffer = null;
 
-    this.vertexPositionAttribute;
-    this.vertexColorAttribute;
+    this.vertexPositionAttribute = null;
+    this.vertexColorAttribute = null;
 
-    this.mvMatrix;
-    this.perspectiveMatrix;
+    this.mvMatrix = null;
+    this.perspectiveMatrix = null;
 
     this.width = width;
     this.height = height;
@@ -40,8 +40,6 @@ function GL (width, height) {
 
 
     this.initWebGL = function () {
-        this.gl = null;
-
         try {
             this.gl = this.canvas.getContext("experimental-webgl");
         }
@@ -64,16 +62,18 @@ function GL (width, height) {
     }
 
     this.drawing = function (shape) {
-        console.log("drawing")
         this.gl.clear(this.gl.COLOR_BUFFER_BIT | this.gl.DEPTH_BUFFER_BIT);
 
         var AspectRatio = this.canvas.width / this.canvas.height;
-        var mvTranslate = Matrix.Translation($V([0.0, 0.0, -6.0])).ensure4x4()
 
-        this.perspectiveMatrix = makePerspective(45, AspectRatio, 1, 100.0);
 
+        this.perspectiveMatrix = makePerspective(45, AspectRatio, 0.1, 100.0);
+
+        /*var mvTranslate = Matrix.Translation($V([0.0, 0.0, -6.0])).ensure4x4();
         this.mvMatrix = Matrix.I(4);
-        this.mvMatrix = this.mvMatrix.x(mvTranslate);
+        this.mvMatrix = this.mvMatrix.x(mvTranslate);*/
+
+        this.mvMatrix = mvTranslate(shape.mvMatrix);
 
         this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.VerticesBuffer);
         this.gl.vertexAttribPointer(this.vertexPositionAttribute, 3, this.gl.FLOAT, false, 0, 0);
@@ -148,6 +148,13 @@ function GL (width, height) {
         }
 
         return shader;
+    }
+
+    function mvTranslate(v) {
+        var mTranslate = Matrix.Translation($V([v[0], v[1], v[2]])).ensure4x4();
+        var matrix = Matrix.I(4);
+        matrix = matrix.x(mTranslate);
+        return matrix;
     }
 
     this.init();

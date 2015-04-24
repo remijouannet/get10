@@ -2,7 +2,7 @@ var webgl;
 
 function start(){
     webgl = new GL(window.innerWidth, window.innerHeight/2);
-    //webgl.init();
+
 
     //this.fps = 5;
     //setTimeout(function() {
@@ -13,38 +13,28 @@ function start(){
 function square1() {
     var vertices = [
         1.0, 1.0, 0.0,
-        -1.0, 1.0, 0.0,
-        1.0, -1.0, 0.0,
-        -1.0, -1.0, 0.0
+        0.0, 1.0, 0.0,
+        1.0, 0.0, 0.0
     ];
 
     var colors = [
-        0.0,  0.0,  1.0,  1.0,     // blue
-        0.0,  0.0,  1.0,  1.0,     // blue
-        0.0,  0.0,  1.0,  1.0,     // blue
-        0.0,  0.0,  1.0,  1.0     // blue
+        1.0,  0.0,  0.0,  1.0    // red
     ];
 
-    var shape1 = new shape(vertices, colors);
+    var mvMatrix = [0.0, 0.0, -1.0];
+
+    var shape1 = new triangle(vertices, colors, mvMatrix);
     webgl.draw(shape1);
 }
 
 function square2() {
-    var vertices = [
-        1.0, 1.0, 0.0,
-        -1.0, 1.0, 0.0,
-        1.0, -1.0, 0.0,
-        -1.0, -1.0, 0.0
-    ];
-
     var colors = [
-        1.0,  1.0,  1.0,  1.0,    // white
-        1.0,  0.0,  0.0,  1.0,    // red
-        0.0,  1.0,  0.0,  1.0,    // green
-        0.0,  0.0,  1.0,  1.0     // blue
+        0.0,  0.0,  1.0,  1.0
     ];
 
-    var shape2 = new shape(vertices, colors);
+    var mvMatrix = [0.0, -0.5, -1.0];
+
+    var shape2 = new square(colors, mvMatrix);
     webgl.draw(shape2);
 }
 
