@@ -1,0 +1,34 @@
+{
+  "name": "glUtils",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sulmanen/glUtils",
+  "authors": [],
+  "description": "glUtils to augment sylvester",
+  "main": "glUtils.js",
+  "keywords": [
+    "webgl",
+    "sylvester"
+  ],
+  "license": "None",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sylvester": "0.1.3"
+  },
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "117da581f8baddf886dcd8b1f4c2bf9e940036ed"
+  },
+  "_source": "git://github.com/sulmanen/glUtils.git",
+  "_target": "~0.0.1",
+  "_originalSource": "glUtils",
+  "_direct": true
+}

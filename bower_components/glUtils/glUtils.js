@@ -17,7 +17,7 @@ Matrix.Translation = function (v)
   }
 
   throw "Invalid length for Translation";
-};
+}
 
 Matrix.prototype.flatten = function ()
 {
@@ -30,7 +30,7 @@ Matrix.prototype.flatten = function ()
         for (var i = 0; i < this.elements.length; i++)
             result.push(this.elements[i][j]);
     return result;
-};
+}
 
 Matrix.prototype.ensure4x4 = function()
 {
@@ -190,4 +190,3 @@ function makeOrtho(left, right, bottom, top, znear, zfar)
            [0, 0, -2 / (zfar - znear), tz],
            [0, 0, 0, 1]]);
 }
-
