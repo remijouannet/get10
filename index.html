@@ -2,48 +2,16 @@
 <head>
     <title>get10</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script src="bower_components/sylvester/sylvester.js" type="text/javascript"></script>
-    <script src="bower_components/glUtils/glUtils.js" type="text/javascript"></script>
-    <script src="js/shape.js" type="text/javascript"></script>
-    <script src="js/GL.js" type="text/javascript"></script>
+    <script src="js/bird.js" type="text/javascript"></script>
     <script src="js/JS.js" type="text/javascript"></script>
-    
-    <script id="shader-fs" type="x-shader/x-fragment">
-        varying lowp vec4 vColor;
-
-        void main(void) {
-            gl_FragColor = vColor;
-        }
-    </script>
-
-    <script id="shader-vs" type="x-shader/x-vertex">
-      attribute vec3 aVertexPosition;
-      attribute vec4 aVertexColor;
-    
-      uniform mat4 uMVMatrix;
-      uniform mat4 uPMatrix;
-
-      varying lowp vec4 vColor;
-
-      void main(void) {
-        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-        vColor = aVertexColor;
-      }
-    </script>
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body onload="start()">
-WIP
-<input id="square1" type="button" value="square1" onclick="square1();" />
-<input id="square2" type="button" value="square2" onclick="square2();" />
-<canvas id="glcanvas" width="640" height="480">
-    Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
-</canvas>
-</body>
-<style>
-    canvas {
-        border: 2px solid gray;
-        -moz-box-shadow: gray 2px 2px 2px;
-        background-color: gray;
-    }
-</style>
+    <body onload="start()" onresize="ready()">
+        <div id="bird">
+            <canvas id="birdCanvas" width="578" height="400"></canvas>
+        </div>
+        <div id="text">
+            WIP get10
+        </div>
+    </body>
 </html>

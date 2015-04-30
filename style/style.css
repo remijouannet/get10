@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('fonts/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('fonts/Lato/Lato-Light.ttf');
+}
+
+body {
+    font-family: Lato-Regular;
+    color: white;
+    font-size: 24pt;
+}
+
+#bird {
+    background-color:white;
+    width: 100%;
+    height: 60%;
+}
+#text {
+    width: 100%;
+    height: 40%;
+    background-color:#4183F7;
+}

@@ -1,41 +1,54 @@
-var webgl;
+var animation = null;
+var delta = 0;
+var looping = true;
+
+var bird1 = null;
+var bird2 = null;
+
+function loop(){
+    if(animation === null){
+        console.log("loop : animation not initialize");
+        return
+    }
+    var currentTime = Date.now();
+
+    setTimeout(function() {
+        requestAnimationFrame(loop);
+        animation.loop(delta);
+        delta = Date.now() - currentTime;
+    }, 1000 / 60);
+}
+
+function ready(){
+    if(!bird1.ready || !bird2.ready) {
+        console.log("ready : one of the bird is not ready");
+        return
+    }
+    animation.resize();
+    animation.ready(bird1, bird2);
+    loop();
+}
 
 function start(){
-    webgl = new GL(window.innerWidth, window.innerHeight/2);
+    animation = new Bird();
 
+    bird1 = new Image();
+    bird2 = new Image();
 
-    //this.fps = 5;
-    //setTimeout(function() {
-    //    requestAnimationFrame(drawScene);
-    //}, 1000 / fps);
-}
+    animation.initCanvas(bird1, bird2);
 
-function square1() {
-    var vertices = [
-        1.0, 1.0, 0.0,
-        0.0, 1.0, 0.0,
-        1.0, 0.0, 0.0
-    ];
+    bird1.src = 'svg/bird1.svg';
+    bird1.onload = function(){
+        bird1.ready = true;
+        ready();
+    };
 
-    var colors = [
-        1.0,  0.0,  0.0,  1.0    // red
-    ];
+    bird2.src = 'svg/bird2.svg';
+    bird2.onload = function(){
+        bird2.ready = true;
+        ready();
+    };
 
-    var mvMatrix = [0.0, 0.0, -1.0];
-
-    var shape1 = new triangle(vertices, colors, mvMatrix);
-    webgl.draw(shape1);
-}
-
-function square2() {
-    var colors = [
-        0.0,  0.0,  1.0,  1.0
-    ];
-
-    var mvMatrix = [0.0, -0.5, -1.0];
-
-    var shape2 = new square(colors, mvMatrix);
-    webgl.draw(shape2);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
