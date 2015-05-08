@@ -2,15 +2,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.remijouannet.get10.activity.FirstActivityAnimation
+        android:id="@+id/anim_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SELECT LEVEL"
         android:id="@+id/button"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:textSize="45dp"
+        android:textSize="19pt"
         android:textColor="@android:color/white"
         android:background="@android:color/transparent"/>
 
@@ -26,13 +33,5 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:src="@drawable/settings_256x256" />
-
-    <com.remijouannet.get10.Activity.FirstActivityAnimation
-        android:id="@+id/anim_view"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

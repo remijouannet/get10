@@ -1,11 +1,3 @@
-package com.remijouannet.get10;
-
-import android.content.Context;
-import android.opengl.GLSurfaceView;
-import android.view.MotionEvent;
-
-import com.remijouannet.get10.Graphic2D.GLRenderer;
-
 /*
     Copyright (C) 2015 Rémi Jouannet <remijouannet@gmail.com>
     This file is part of get10.
@@ -20,6 +12,15 @@ import com.remijouannet.get10.Graphic2D.GLRenderer;
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
+
+package com.remijouannet.get10;
+
+import android.content.Context;
+import android.opengl.GLSurfaceView;
+import android.view.MotionEvent;
+
+import com.remijouannet.get10.graphic2D.GLRenderer;
+
 
 public class GameSurfaceView extends GLSurfaceView {
     private static final String TAG = GameSurfaceView.class.getSimpleName();

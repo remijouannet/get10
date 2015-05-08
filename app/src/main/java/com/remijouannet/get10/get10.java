@@ -1,15 +1,3 @@
-package com.remijouannet.get10;
-
-import android.app.Application;
-import android.util.Log;
-
-import com.google.android.gms.analytics.GoogleAnalytics;
-import com.google.android.gms.analytics.Tracker;
-import com.remijouannet.get10.R;
-
-import java.awt.font.TextAttribute;
-import java.util.HashMap;
-
 /*
     Copyright (C) 2015 Rémi Jouannet <remijouannet@gmail.com>
     This file is part of get10.
@@ -24,6 +12,19 @@ import java.util.HashMap;
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
+
+package com.remijouannet.get10;
+
+import android.app.Application;
+import android.util.Log;
+
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
+import com.remijouannet.get10.R;
+
+import java.awt.font.TextAttribute;
+import java.util.HashMap;
+
 
 public class get10 extends Application {
     public static final String TAG = get10.class.getSimpleName();

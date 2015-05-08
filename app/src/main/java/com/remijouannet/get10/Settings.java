@@ -1,10 +1,3 @@
-package com.remijouannet.get10;
-
-
-import com.remijouannet.get10.Activity.FirstActivity;
-import com.remijouannet.get10.GameMode.GameMode;
-import com.remijouannet.get10.Graphic2D.Tools;
-
 /*
     Copyright (C) 2015 Rémi Jouannet <remijouannet@gmail.com>
     This file is part of get10.
@@ -19,6 +12,13 @@ import com.remijouannet.get10.Graphic2D.Tools;
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
+
+package com.remijouannet.get10;
+
+
+import com.remijouannet.get10.activity.FirstActivity;
+import com.remijouannet.get10.gameMode.GameMode;
+import com.remijouannet.get10.graphic2D.Tools;
 
 public class Settings {
     public static float height;

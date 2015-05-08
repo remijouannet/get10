@@ -1,8 +1,3 @@
-package com.remijouannet.get10;
-
-import android.content.Context;
-import android.content.SharedPreferences;
-
 /*
     Copyright (C) 2015 Rémi Jouannet <remijouannet@gmail.com>
     This file is part of get10.
@@ -17,6 +12,12 @@ import android.content.SharedPreferences;
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
+
+package com.remijouannet.get10;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
 
 public class Data {
     private Context context;

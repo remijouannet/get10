@@ -6,13 +6,13 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.remijouannet.get10.Fragment.FirstFragment"
+        android:name="com.remijouannet.get10.fragment.FirstFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <fragment
         android:id="@+id/ChooseFragment"
-        android:name="com.remijouannet.get10.Fragment.ChooseFragment"
+        android:name="com.remijouannet.get10.fragment.ChooseFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
