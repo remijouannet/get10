@@ -64,7 +64,7 @@ MERGED from com.google.android.gms:play-services:6.5.87:21:9
 		ADDED from AndroidManifest.xml:37:20
 	android:value
 		ADDED from AndroidManifest.xml:38:13
-activity#com.remijouannet.get10.Activity.FirstActivity
+activity#com.remijouannet.get10.activity.FirstActivity
 ADDED from AndroidManifest.xml:39:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:41:13
@@ -82,7 +82,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:45:17
 	android:name
 		ADDED from AndroidManifest.xml:45:27
-activity#com.remijouannet.get10.Activity.GameActivity
+activity#com.remijouannet.get10.activity.GameActivity
 ADDED from AndroidManifest.xml:48:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:50:13

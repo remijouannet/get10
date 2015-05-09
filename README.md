@@ -1,15 +1,18 @@
-
 ![alt tag](https://lh3.googleusercontent.com/inFrp8l9hojvyoz2kyfCyDS4RL-oWrQwhB9KmSgUIcUoU11RUUJh8O-V65-eTEu2Fan_=w300-rw)
+
 # get10 [![Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.remijouannet.get10)
+
+[get10.remijouannet.com](get10.remijouannet.com)
+
 get10, an android game, OpenGL 2.0, Admob, Google Analytics
 
 I made this game to learn Android, Java and OpenGL 2.0.
 
-WIP  [gh-pages](https://remijouannet.github.io/get10/)
 
 ###Overview:
 - Open Source
-- made without any  Game Engine, just OpenGL 2.0
+- Inspired by [Mr Flap](http://1button.co/mrflap)
+- made without any Game Engine, just OpenGL 2.0
 - Use Google Admob
 - Use Google Analytics
 - sounds and ads can be disable in the settings menu
