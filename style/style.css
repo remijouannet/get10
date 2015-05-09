@@ -11,35 +11,54 @@
 body {
     font-family: Lato-Regular;
     color: white;
-    font-size: 24pt;
+    border: none;
+    margin: 0;
 }
 
 #bird {
+    display: inline-block;
     background-color:white;
-    width: 100%;
-    height: 60%;
+    width: 100vw;
+    height: 60vh;
 }
 
 #text {
-    width: 100%;
-    height: 40%;
+    display: inline-block;
     background-color:#4183F7;
+    width: 100vw;
+    height: 40vh;
+}
+
+#link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    text-align: center;
 }
 
 #google_play{
-    height: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    height: 15vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 #github{
-    height: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    height: 15vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+#google_play:hover{
+    opacity: 0.4;
+}
+
+#github:hover{
+    opacity: 0.4;
 }
 
 #title{
     text-align: center;
+    font-size: 50pt;
+    margin: 0;
 }

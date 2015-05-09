@@ -2,23 +2,25 @@
     <head>
         <title>get10</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="js/polyfill.js" type="text/javascript"></script>
         <script src="js/bird.js" type="text/javascript"></script>
         <script src="js/JS.js" type="text/javascript"></script>
         <link rel="stylesheet" href="style/style.css">
     </head>
-    <body onload="start()" onresize="ready()">
+    <body onload="first()" onresize="ready()">
         <div id="bird">
             <canvas id="birdCanvas"></canvas>
         </div>
         <div id="text">
             <p id="title">get10</p>
-            <a href="https://github.com/remijouannet/get10">
-                <img id="github" src="svg/github.svg">
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.remijouannet.get10">
-                <img id="google_play" src="svg/google_play.svg">
-            </a>
-            WIP get10
+            <div id="link">
+                <a href="https://github.com/remijouannet/get10">
+                    <img id="github" src="svg/github.svg">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.remijouannet.get10">
+                    <img id="google_play" src="svg/google_play.svg">
+                </a>
+            </div>
         </div>
     </body>
 </html>

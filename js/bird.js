@@ -6,16 +6,16 @@ function Bird(){
     this.bird1 = null;
     this.bird2 = null;
 
-    this.birdSpec= null;
+    this.birdSpec = null;
 
     this.delta = 0;
 
     this.deltachangeBird = 0;
 
     this.deltamoveBird = 0;
-    this.stepMoveBird = 0;
+    this.wayMoveBird = 1;
 
-    this.birdSpec = function (){
+    this.birdSpecObj = function (){
         this.bird = null;
         this.x = null;
         this.y = null;
@@ -30,16 +30,15 @@ function Bird(){
     };
 
     this.resize = function() {
-        this.canvas.height = window.innerHeight/2;
-        this.canvas.width = window.innerWidth;
-        this.stepMoveBird = this.canvas.height/200;
+        this.canvas.height = document.getElementById("bird").offsetHeight;
+        this.canvas.width = document.getElementById("bird").offsetWidth;
     };
 
     this.ready = function(bird1, bird2){
         this.bird1 = bird1;
         this.bird2 = bird2;
 
-        this.birdSpec = new this.birdSpec();
+        this.birdSpec = new this.birdSpecObj();
         this.birdSpec.bird = this.bird1;
         this.birdSpec.height = this.canvas.height/3;
         this.birdSpec.width = this.birdSpec.height * (this.bird1.width / this.bird1.height);
@@ -51,7 +50,7 @@ function Bird(){
         this.delta = delta;
         this.drawing();
 
-        if(this.deltachangeBird > (1000/10)){
+        if(this.deltachangeBird > (1000/9)){
             this.changeBird();
             this.deltachangeBird = 0;
         }
@@ -85,13 +84,13 @@ function Bird(){
     this.moveBird = function() {
         var min = (this.canvas.height/4 - this.birdSpec.height/2);
         var max = (this.canvas.height/1.5 - this.birdSpec.height/2);
+        var stepMoveBird = this.canvas.height/200;
 
-        if(this.birdSpec.y >= max && this.stepMoveBird > 0){
-            this.stepMoveBird = -1 * this.stepMoveBird;
-        }else if(this.birdSpec.y <= min && this.stepMoveBird < 0){
-            this.stepMoveBird = -1 * this.stepMoveBird;
+        if(this.birdSpec.y >= max){
+            this.wayMoveBird = -1;
+        }else if(this.birdSpec.y <= min){
+            this.wayMoveBird = 1;
         }
-
-        this.birdSpec.y += this.stepMoveBird;
+        this.birdSpec.y += this.wayMoveBird * stepMoveBird;
     };
 }
