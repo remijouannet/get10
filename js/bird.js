@@ -55,7 +55,7 @@ function Bird(){
             this.deltachangeBird = 0;
         }
 
-        if(this.deltamoveBird > (1000/60)){
+        if(this.deltamoveBird > (1000/40)){
             this.moveBird();
             this.deltamoveBird = 0;
         }
