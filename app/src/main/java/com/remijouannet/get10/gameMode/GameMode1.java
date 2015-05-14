@@ -37,5 +37,6 @@ public class GameMode1 extends GameMode{
         this.numberColumns = 3;
         this.gameScene = 1;
         this.background = null;
+        this.bird = "bird/texture_manon_256x256_" + String.valueOf(this.id) + ".png";
     }
 }

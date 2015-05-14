@@ -28,10 +28,12 @@ public class Settings {
     public static float[] originalColorBird = new float[]{0.0f, 0.0f,180.0f/255.0f, 1.0f};
     public static float[] originalColorRestart = originalColorBird;
     public static float[] colorWhite = new float[]{1.0f, 1.0f, 1.0f, 1.0f};
+    public static float[] colorBlack = new float[]{0.0f, 0.0f, 0.0f, 1.0f};
     public static float[] colorStartLine = new float[]{0.0f, 0.0f, 0.0f, 0.1f};
     public static String font = "fonts/Lato/Lato-Black.ttf";
     public static boolean sound = true;
     public static boolean ads = true;
+    public static boolean unlock = true;
 
 
     public static float[] color = Tools.randomColor();
@@ -49,7 +51,8 @@ public class Settings {
     public static float sizeColumns = 40;
     public static int numberColumns = 4;
     public static int gameScene = 1;
-    public static String background = "background/default.png";
+    public static String background = "background/background1.png";
+    public static String bird = "bird/texture_manon_256x256.png";
 
     public static int currentGameMode;
     public static int scoreToUnlock;
@@ -58,6 +61,7 @@ public class Settings {
     public Settings(float width, float height, GameMode gameMode) {
         sound = Data.getConfig(FirstActivity.context.getString(R.string.key_sound));
         ads = Data.getConfig(FirstActivity.context.getString(R.string.key_ads));
+        unlock = Data.getConfig(FirstActivity.context.getString(R.string.key_unlock));
 
         currentGameMode = gameMode.id;
         scoreToUnlock = gameMode.scoreToUnlock;
@@ -84,6 +88,7 @@ public class Settings {
 
         gameScene = gameMode.gameScene;
         background = gameMode.background;
+        bird = gameMode.bird;
 
         sizeCloseButton = Settings.width / gameMode.sizeCloseButton;
     }

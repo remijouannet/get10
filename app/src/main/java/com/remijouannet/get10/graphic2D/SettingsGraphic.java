@@ -17,6 +17,6 @@ package com.remijouannet.get10.graphic2D;
 
 
 public class SettingsGraphic {
-    public final static String fileVs = "Shaders/default_vs.glsl";
-    public final static String fileFs = "Shaders/default_fs.glsl";
+    public final static String fileVs = "Shaders/default_vs2.glsl";
+    public final static String fileFs = "Shaders/default_fs2.glsl";
 }

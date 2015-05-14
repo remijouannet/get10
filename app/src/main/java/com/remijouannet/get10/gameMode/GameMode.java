@@ -34,10 +34,9 @@ public class GameMode {
     public  float sizeColumns;
     public int gameScene;
     public String background;
+    public String bird;
 
-    public static GameMode getGameMode0(){
-        return new GameMode0();
-    }
+    public static GameMode getGameMode0(){return new GameMode0();}
 
     public static GameMode getGameMode1(){
         return new GameMode1();
@@ -79,6 +78,10 @@ public class GameMode {
         return new GameMode10();
     }
 
+    public static GameMode getGameMode11(){
+        return new GameMode11();
+    }
+
 
     public static GameMode[] getGameModes(){
         return new GameMode[]{new GameMode0(),
@@ -86,7 +89,8 @@ public class GameMode {
                 new GameMode3(), new GameMode4(),
                 new GameMode5(),  new GameMode6(),
                 new GameMode7(), new GameMode8(),
-        new GameMode9(), new GameMode10()};
+                new GameMode9(), new GameMode10(),
+                new GameMode11()};
     }
 
     public static GameMode getGameMode(int id){

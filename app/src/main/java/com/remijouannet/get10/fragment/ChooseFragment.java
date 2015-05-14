@@ -21,6 +21,7 @@ import android.app.ListFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,17 +88,19 @@ public class ChooseFragment extends ListFragment {
 
     @Override
     public void onResume() {
+        Log.d(TAG, "onResume");
         super.onResume();
 
     }
 
     @Override
     public void onPause() {
+        Log.d(TAG, "onPause");
         super.onPause();
     }
 
     private void launchGame(int id){
-        if (Data.getUnlock(id)){
+        if (Data.getUnlock(id) || !Data.getConfig(FirstActivity.context.getString(R.string.key_unlock)) ){
             new Settings(FirstActivity.size.x, FirstActivity.size.y, GameMode.getGameMode(id));
             Intent i = new Intent(context, GameActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);

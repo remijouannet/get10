@@ -15,9 +15,9 @@
 
 package com.remijouannet.get10.graphic2D;
 
-import com.remijouannet.get10.graphic2D.Shape.Shape;
-import com.remijouannet.get10.graphic2D.Helper.BufferHelper;
-import com.remijouannet.get10.graphic2D.Helper.GraphicHelper;
+import com.remijouannet.get10.graphic2D.shape.Shape;
+import com.remijouannet.get10.graphic2D.helper.BufferHelper;
+import com.remijouannet.get10.graphic2D.helper.GraphicHelper;
 
 import java.util.ArrayList;
 

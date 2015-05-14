@@ -32,10 +32,11 @@ public class GameMode10 extends GameMode{
         this.speedBird = -0.8f;
         this.speedColumns = 0.9f;
         this.speedColumnsWay = 1000.0f;
-        this.sizeColumnsWay = 5.0f;
+        this.sizeColumnsWay = 4.3f;
         this.sizeColumns = 35.0f;
         this.numberColumns = 5;
         this.gameScene = 1;
         this.background = null;
+        this.bird = "bird/texture_manon_256x256_" + String.valueOf(this.id) + ".png";
     }
 }

@@ -26,8 +26,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 
 import com.remijouannet.get10.activity.FirstActivity;
-import com.remijouannet.get10.graphic2D.Helper.GraphicHelper;
-import com.remijouannet.get10.graphic2D.Texture.LoadTexture;
+import com.remijouannet.get10.graphic2D.helper.GraphicHelper;
+import com.remijouannet.get10.graphic2D.texture.LoadTexture;
 import com.remijouannet.get10.scenes.GameWorld;
 
 import javax.microedition.khronos.egl.EGLConfig;

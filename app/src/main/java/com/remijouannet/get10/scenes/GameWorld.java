@@ -19,8 +19,8 @@ import android.view.MotionEvent;
 
 import com.remijouannet.get10.graphic2D.GLRenderer;
 import com.remijouannet.get10.graphic2D.GameScene;
-import com.remijouannet.get10.scenes.GameScene.GameScene1;
-import com.remijouannet.get10.scenes.GameScene.GameScene2;
+import com.remijouannet.get10.scenes.gameScene.GameScene1;
+import com.remijouannet.get10.scenes.gameScene.GameScene2;
 import com.remijouannet.get10.Settings;
 
 public class GameWorld {

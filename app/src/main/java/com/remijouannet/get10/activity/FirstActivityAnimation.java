@@ -25,7 +25,7 @@ import android.graphics.Picture;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.remijouannet.get10.graphic2D.Helper.BitmapHelper;
+import com.remijouannet.get10.graphic2D.helper.BitmapHelper;
 import com.remijouannet.get10.graphic2D.Tools;
 
 public class FirstActivityAnimation extends ImageView {

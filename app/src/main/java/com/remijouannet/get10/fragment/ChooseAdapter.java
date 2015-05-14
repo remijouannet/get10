@@ -27,6 +27,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.remijouannet.get10.Data;
+import com.remijouannet.get10.activity.FirstActivity;
 import com.remijouannet.get10.gameMode.GameMode;
 import com.remijouannet.get10.graphic2D.Tools;
 import com.remijouannet.get10.R;
@@ -73,7 +74,9 @@ public class ChooseAdapter extends ArrayAdapter<String> {
         ImageView imageViewHighscore = (ImageView) rowView.findViewById(R.id.highscore);
         ImageView imageViewLock = (ImageView) rowView.findViewById(R.id.lock);
 
-        if (!Data.getUnlock(gameMode.id) && gameMode.id != 0){
+        if (!Data.getUnlock(gameMode.id)
+                && gameMode.id != 0
+                && Data.getConfig(FirstActivity.context.getString(R.string.key_unlock)) ){
             textViewScoreToUnlock.setText(String.valueOf(gameMode.scoreToUnlock));
             rowView.setBackgroundColor(Tools.getIntFromColor(Settings.gameOverColor));
 
@@ -92,7 +95,8 @@ public class ChooseAdapter extends ArrayAdapter<String> {
             imageViewHighscore.setAlpha(0.1f);
             imageViewSkull.setAlpha(0.1f);
         }else {
-            if (!Data.getUnlock(gameMode.id)){
+            if (!Data.getUnlock(gameMode.id)
+                    && Data.getConfig(FirstActivity.context.getString(R.string.key_unlock))){
                 Data.setUnlock(gameMode.id, true);
             }
 

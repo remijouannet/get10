@@ -17,7 +17,7 @@ package com.remijouannet.get10.graphic2D;
 
 import android.view.MotionEvent;
 
-import com.remijouannet.get10.graphic2D.Shape.Shape;
+import com.remijouannet.get10.graphic2D.shape.Shape;
 import com.remijouannet.get10.Settings;
 
 

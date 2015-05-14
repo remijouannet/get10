@@ -19,6 +19,7 @@ package com.remijouannet.get10.fragment;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.remijouannet.get10.activity.FirstActivity;
 import com.remijouannet.get10.activity.FirstActivityAnimation;
@@ -50,6 +52,7 @@ public class FirstFragment extends Fragment {
     private static ImageView dialogSound;
     private static ImageView dialogAds;
     private static ImageView dialogClose;
+    private static ImageView dialogUnlock;
 
     private static View rootview;
 
@@ -156,6 +159,7 @@ public class FirstFragment extends Fragment {
 
         dialogSound = (ImageView)alertDialog.findViewById(R.id.sound);
         dialogAds = (ImageView)alertDialog.findViewById(R.id.ads);
+        dialogUnlock = (ImageView)alertDialog.findViewById(R.id.unlock);
         dialogClose = (ImageView)alertDialog.findViewById(R.id.close);
 
         if (Data.getConfig(context.getString(R.string.key_sound))){
@@ -172,6 +176,14 @@ public class FirstFragment extends Fragment {
         }else {
             dialogAds.setTag(R.drawable.ads_close);
             dialogAds.setImageResource(R.drawable.ads_close);
+        }
+
+        if (Data.getConfig(context.getString(R.string.key_unlock))){
+            dialogUnlock.setTag(R.drawable.unlock_white);
+            dialogUnlock.setImageResource(R.drawable.unlock_white);
+        }else {
+            dialogUnlock.setTag(R.drawable.unlock_white_close);
+            dialogUnlock.setImageResource(R.drawable.unlock_white_close);
         }
 
         dialogSound.setOnClickListener(new View.OnClickListener() {
@@ -208,6 +220,23 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        dialogUnlock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if ((int)dialogUnlock.getTag() == R.drawable.unlock_white){
+                    dialogUnlock.setTag(R.drawable.unlock_white_close);
+                    dialogUnlock.setImageResource(R.drawable.unlock_white_close);
+                    Settings.unlock = false;
+                    Data.setConfig(context.getString(R.string.key_unlock), Settings.unlock);
+                    Toast.makeText(context, "YOU SUCK", Toast.LENGTH_LONG);
+                }else if((int)dialogUnlock.getTag() == R.drawable.unlock_white_close){
+                    dialogUnlock.setTag(R.drawable.unlock_white);
+                    dialogUnlock.setImageResource(R.drawable.unlock_white);
+                    Settings.unlock = true;
+                    Data.setConfig(context.getString(R.string.key_unlock), Settings.unlock);
+                }
+            }
+        });
 
         dialogClose.setOnClickListener(new View.OnClickListener() {
             @Override
