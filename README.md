@@ -20,6 +20,9 @@ I made this game to learn Android, Java and OpenGL ES 2.0.
 - really annoying sounds
 - colorful
 
+###Contributors
+- colors choice, profile bird and background of the last level made by [Nama](http://slimnama.tumblr.com/)
+
 
 ###Note
 - my Admob and GA ID are, of course, not push to this repo
