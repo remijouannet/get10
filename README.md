@@ -3,6 +3,7 @@
 # get10 [![Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.remijouannet.get10)
 
 [get10.remijouannet.com](http://get10.remijouannet.com/)
+[hacker news](https://news.ycombinator.com/item?id=9576805)
 
 get10, an android game, OpenGL 2.0, Admob, Google Analytics
 
