@@ -27,7 +27,7 @@ mv app-ci.apk get10.apk
 echo "upload get10.apk"
 github-release upload \
     --user remijouannet \
-    --name "$version-hyper-alpha-yolo-experimental" \
+    --name "get10.apk" \
     --repo get10 \
     --file "get10.apk" \
     --replace \
