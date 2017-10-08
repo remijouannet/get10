@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install --force-yes -y openjdk-8-jdk
 
 # Install Deps
 RUN dpkg --add-architecture i386 && apt-get update
-RUN apt-get install -y --force-yes unzip expect git wget libc6-i386 \
+RUN apt-get install -y --force-yes unzip expect git wget libc6-i386 make \
         lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1 python curl libqt5widgets5 
 
 # Clean

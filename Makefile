@@ -1,7 +1,9 @@
 VERSION=$$(git describe --abbrev=0 --tags)
 PWD=$$(pwd)
 
-pkg: 
+pkg:
+	rm -rf ./build/*
+	rm -rf ./app/build/outputs/apk/*
 	./gradlew assembleCi
 
 release:
@@ -17,6 +19,8 @@ docker-build:
 
 docker-release:
 	docker run \
-		-v $(PWD)/pkg:/workspace/app/build/outputs/apk \
+		-v $(PWD)/pkg:/workspace/pkg \
 		-e "GITHUB_TOKEN=$(GITHUB_TOKEN)" \
 		android-get10:$(VERSION) release
+
+.PHONY: pkg release
