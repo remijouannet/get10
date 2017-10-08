@@ -11,6 +11,11 @@ RUN apt-get install -y --force-yes unzip expect git wget libc6-i386 make \
 # Clean
 RUN apt-get clean && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Install github-releases
+RUN wget https://github.com/aktau/github-release/releases/download/v0.7.2/linux-amd64-github-release.tar.bz2
+RUN tar xvf linux-amd64-github-release.tar.bz2
+RUN mv bin/linux/amd64/github-release /bin/ && rm -rf bin/linux && rm linux-amd64-github-release.tar.bz2
+
 # Install Android SDK
 RUN mkdir -p /opt/android && cd /opt/android \
     && wget --output-document=android.zip --quiet https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
