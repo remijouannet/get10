@@ -9,7 +9,7 @@ which github-release || echo 'please install the tool github-releases'
 github-release info \
     --user remijouannet \
     --repo get10 \
-    --tag $version || echo "the release doesn't exist"
+    --tag $version
 
 if [ $? != 0 ]
 then
@@ -25,11 +25,12 @@ then
 fi
 
 cd pkg/
-echo "upload app-ci.apk"
+mv app-ci.apk get10.apk
+echo "upload get10.apk"
 github-release upload \
     --user remijouannet \
-    --name "get10.apk" \
+    --name "$version-hyper-alpha-yolo-experimental" \
     --repo get10 \
-    --file "app-ci.apk" \
+    --file "get10.apk" \
     --replace \
     --tag $version || echo "failed to upload app-ci.apk"
