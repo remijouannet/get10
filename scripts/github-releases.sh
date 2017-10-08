@@ -17,11 +17,9 @@ then
         --user remijouannet \
         --repo get10 \
         --tag $version \
-        --draft \
         --pre-release \
         --name "$version-hyper-alpha-yolo-experimental" \
-        --description "risks of explosion" \
-        --target $version || echo "failed to create release for $version"
+        --description "risks of explosion" || echo "failed to create release for $version"
 fi
 
 cd pkg/
